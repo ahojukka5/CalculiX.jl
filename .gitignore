@@ -1,2 +1,6 @@
 *.jl.cov
 *.jl.mem
+builds/
+downloads/
+src/
+usr/
