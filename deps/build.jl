@@ -151,7 +151,7 @@ run(`git clone git@github.com:JuliaFEM/CalculiX-cmake.git`)
 cd(build_calculix)
 run(`cmake ../../src/CalculiX-cmake`)
 run(`make`)
-run(`mv libcalculix.so $lib`)
+#run(`mv libcalculix.so $lib`)
 
 
 # using BinDeps
