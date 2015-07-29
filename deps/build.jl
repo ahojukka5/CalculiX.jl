@@ -24,7 +24,8 @@ end
 
 cd(downloads)
 if !isfile(joinpath(downloads,"spooles.2.2.tgz"))
-  run(`wget http://netlib.sandia.gov/linalg/spooles/spooles.2.2.tgz`)
+  #run(`wget http://netlib.sandia.gov/linalg/spooles/spooles.2.2.tgz`)
+  download("http://netlib.sandia.gov/linalg/spooles/spooles.2.2.tgz", "spooles.2.2.tgz")
 end
 cd(spooles)
 run(`tar xzf ../../downloads/spooles.2.2.tgz`)
@@ -91,8 +92,10 @@ end
 # Next ARPACK
 cd(downloads)
 if !isfile(joinpath(downloads,"arpack96.tar.gz"))
-  run(`wget http://www.caam.rice.edu/software/ARPACK/SRC/arpack96.tar.gz`)
-  run(`wget http://www.caam.rice.edu/software/ARPACK/SRC/patch.tar.gz`)
+  #run(`wget http://www.caam.rice.edu/software/ARPACK/SRC/arpack96.tar.gz`)
+  #run(`wget http://www.caam.rice.edu/software/ARPACK/SRC/patch.tar.gz`)
+  download("http://www.caam.rice.edu/software/ARPACK/SRC/arpack96.tar.gz", "arpack96.tar.gz")
+  download("http://www.caam.rice.edu/software/ARPACK/SRC/patch.tar.gz", "patch.tar.gz")
 end
 
 cd(src)
@@ -147,7 +150,8 @@ run(`find . -name '*.h' -exec cp --parents \{\} ../usr/include/ \;`)
 
 # And then the Calculix package
 cd(src)
-run(`git clone git@github.com:JuliaFEM/CalculiX-cmake.git`)
+#run(`git clone git@github.com:JuliaFEM/CalculiX-cmake.git`)
+run(`git clone https://github.com/JuliaFEM/CalculiX-cmake.git`)
 cd(build_calculix)
 run(`cmake ../../src/CalculiX-cmake`)
 run(`make`)
