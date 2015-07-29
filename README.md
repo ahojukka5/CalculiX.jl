@@ -1,4 +1,4 @@
-[![JuliaFEMLogo](https://github.com/JuliaFEM/JuliaFEM.jl/blob/master/docs/logo/JuliaFEMLogo_128x128.png)](http://www.juliafem.org) 
+[![JuliaFEMLogo](https://github.com/JuliaFEM/JuliaFEM.jl/blob/master/docs/logo/JuliaFEMLogo_128x128.png)](http://www.juliafem.org) ![travis](https://travis-ci.org/JuliaFEM/CalculiX.jl.svg?branch=master)
 
 # CalculiX.jl is a part of JuliaFEM
 
