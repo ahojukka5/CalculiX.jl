@@ -150,7 +150,8 @@ run(`find . -name '*.h' -exec cp --parents \{\} ../usr/include/ \;`)
 
 # And then the Calculix package
 cd(src)
-run(`git clone git@github.com:JuliaFEM/CalculiX-cmake.git`)
+#run(`git clone git@github.com:JuliaFEM/CalculiX-cmake.git`)
+run(`git clone https://github.com/JuliaFEM/CalculiX-cmake.git`)
 cd(build_calculix)
 run(`cmake ../../src/CalculiX-cmake`)
 run(`make`)
