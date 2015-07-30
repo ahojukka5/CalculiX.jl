@@ -30,6 +30,13 @@ mkdir(build_calculix)
 cd(build_calculix)
 run(`cmake ../../src/CalculiX-cmake`)
 run(`make`)
+cd(here)
+cp(joinpath("src","CalculiX-cmake","src","CalculiX.h"),joinpath("usr","include","CalculiX.h"))
+
+# Let's run CalculiX's tests
+cd(joinpath("src","CalculiX-cmake","test"))
+run(`./compare`)
+run(`cat error_output`)
 
 
 # here = dirname(@__FILE__)
