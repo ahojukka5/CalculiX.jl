@@ -20,6 +20,10 @@ cd(here)
 mkdir("usr")
 mv(joinpath("builds","usr","include"),joinpath("usr","include"))
 mv(joinpath("builds","usr","lib","x86_64-linux-gnu"),joinpath("usr","lib"))
+arpack_libs = readdir(joinpath("builds","usr","lib"))
+for lib in arpack_libs
+  mv(lib,joinpath("usr","lib"))
+end
 
 mkdir(src)
 cd(src)
