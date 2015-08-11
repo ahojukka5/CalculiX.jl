@@ -1,7 +1,6 @@
 *.jl.cov
 *.jl.mem
-builds/
-downloads/
-src/
-usr/
-.DS_Store
+deps/builds
+deps/usr
+deps/src
+notebooks/.ipynb_checkpoints/
